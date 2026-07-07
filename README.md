@@ -26,15 +26,15 @@ traslochiJacopo/
 Il form contatti è predisposto per funzionare in due modalità:
 
 ### 1. Metodo Consigliato: Formspree (Gratuito)
-[Formspree](https://formspree.io/) è un servizio che ti permette di ricevere le email inviate dal modulo direttamente sulla tua casella Gmail (`JacPaoTrasporti@gmail.com`) senza bisogno di un server.
+[Formspree](https://formspree.io/) è un servizio che ti permette di ricevere le email inviate dal modulo direttamente sulla tua casella Gmail (`sgomberibiella@gmail.com`) senza bisogno di un server.
 1. Vai su [Formspree.io](https://formspree.io/) e registrati gratuitamente.
-2. Crea un nuovo "Form" e inserisci come email di destinazione `JacPaoTrasporti@gmail.com`.
+2. Crea un nuovo "Form" e inserisci come email di destinazione `sgomberibiella@gmail.com`.
 3. Copia l'**Endpoint URL** fornito da Formspree (sarà simile a: `https://formspree.io/f/xy12ab34`).
 4. Apri il file `index.html` alla riga ~398 e sostituisci `https://formspree.io/f/YOUR_FORMSPREE_ID_HERE` con il tuo URL.
 5. Salva e pubblica. Il gioco è fatto!
 
 ### 2. Fallback Automatico (Mailto)
-Se non configuri Formspree (ovvero lasci `YOUR_FORMSPREE_ID_HERE` intatto nel codice), il file `script.js` rileverà automaticamente la situazione. All'invio del form, si aprirà il programma di posta dell'utente (come Outlook, Mail di Apple o Gmail) con un messaggio precompilato contenente tutti i dettagli inseriti (Nome, Telefono, Comune, Servizio, Messaggio) pronto da inviare a `JacPaoTrasporti@gmail.com`.
+Se non configuri Formspree (ovvero lasci `YOUR_FORMSPREE_ID_HERE` intatto nel codice), il file `script.js` rileverà automaticamente la situazione. All'invio del form, si aprirà il programma di posta dell'utente (come Outlook, Mail di Apple o Gmail) con un messaggio precompilato contenente tutti i dettagli inseriti (Nome, Telefono, Comune, Servizio, Messaggio) pronto da inviare a `sgomberibiella@gmail.com`.
 
 ---
 

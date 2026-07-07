@@ -162,13 +162,13 @@ document.addEventListener('DOMContentLoaded', () => {
         );
         
         // Destinatario fisso
-        const emailDest = 'JacPaoTrasporti@gmail.com';
+        const emailDest = 'sgomberibiella@gmail.com';
         
         // Crea il link mailto e reindirizza
         const mailtoUrl = `mailto:${emailDest}?subject=${subject}&body=${body}`;
         
         // Mostra un avviso visivo all'utente
-        alert("Grazie per aver compilato i dati! Ora si aprirà il tuo programma di posta elettronica per confermare l'invio a JacPaoTrasporti@gmail.com.");
+        alert("Grazie per aver compilato i dati! Ora si aprirà il tuo programma di posta elettronica per confermare l'invio a sgomberibiella@gmail.com.");
         
         window.location.href = mailtoUrl;
       }
