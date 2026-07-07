@@ -1150,6 +1150,12 @@ ul {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  flex-wrap: wrap;
+  word-break: break-all;
+}
+
+.contact-email-link {
+  font-size: 1.15rem;
 }
 
 .contact-card-link:hover {
@@ -1576,10 +1582,27 @@ ul {
   }
 }
 
-/* Posizionamento pulsante WhatsApp su mobile */
+/* Ottimizzazioni per Mobile (sotto 768px) per evitare overflow e centrare tutto */
 @media (max-width: 768px) {
   .wa-fixed-btn {
-    right: 35px;
+    right: 25px; /* Spostato più a sinistra */
     bottom: 25px;
+  }
+
+  .form-wrapper {
+    padding: 1.25rem; /* Ridotto per non far sfasare il modulo contatti */
+    border-radius: var(--radius-md);
+  }
+
+  .contact-card {
+    padding: 1.25rem;
+  }
+
+  .contact-card-link {
+    font-size: 1.15rem; /* Ridotto per non far sforare i numeri */
+  }
+
+  .contact-email-link {
+    font-size: 0.95rem; /* L'email scende a 0.95rem per stare nella larghezza utile mobile */
   }
 }
