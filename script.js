@@ -3,6 +3,35 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  // --- GESTIONE HAMBURGER MENU MOBILE ---
+  const menuToggle = document.getElementById('js-menu-toggle');
+  const navMenu = document.getElementById('js-nav-menu');
+  
+  if (menuToggle && navMenu) {
+    menuToggle.addEventListener('click', () => {
+      const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+      menuToggle.setAttribute('aria-expanded', !isExpanded);
+      menuToggle.classList.toggle('active');
+      navMenu.classList.toggle('active');
+      
+      // Blocca lo scroll del body solo su mobile/tablet quando il menu è aperto
+      if (window.innerWidth < 1150) {
+        document.body.style.overflow = !isExpanded ? 'hidden' : '';
+      }
+    });
+    
+    // Chiudi il menu quando si clicca su un link (ancora interna)
+    const menuLinks = navMenu.querySelectorAll('a');
+    menuLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.classList.remove('active');
+        navMenu.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+    });
+  }
+
   // --- GESTIONE MODALE CTA PRINCIPALE ---
   const modalOverlay = document.getElementById('cta-modal');
   const openModalButtons = document.querySelectorAll('.js-open-modal');
