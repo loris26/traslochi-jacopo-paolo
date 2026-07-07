@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
       navMenu.classList.toggle('active');
       
       // Blocca lo scroll del body solo su mobile/tablet quando il menu è aperto
-      if (window.innerWidth < 1150) {
+      if (window.innerWidth < 1200) {
         document.body.style.overflow = !isExpanded ? 'hidden' : '';
       }
     });
